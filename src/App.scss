@@ -1,0 +1,29 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+:root {
+  --background: #F9F9F9;
+  --foreground: #1D1D1D;
+  --primary-color: #FEAC3E;
+  --text-color: #262626;
+  --inter-font: "Inter", serif;
+  --monsterrat-font: "Montserrat", serif;
+
+}
+body{
+  font-family: var(--inter-font);
+  background-color: var(--background);
+  color: var(--text-color);
+
+}
+
+.wrapper{
+  max-width: 440px;
+  height: fit-content;
+  border: 1px solid black;
+  margin: auto;
+}
