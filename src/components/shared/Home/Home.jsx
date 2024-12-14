@@ -3,6 +3,6 @@ import './home.scss'
 
 export default function Home() {
   return (
-    <section className='home'>Home</section>
+    <section className='home'>Слон</section>
   )
 }
