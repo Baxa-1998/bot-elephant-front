@@ -4,6 +4,7 @@ import Home from './components/shared/Home/Home';
 
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import { Layout } from './components/shared/Layout/Layout';
+import Profile from './components/pages/Profile/Profile';
 
 
 
@@ -16,6 +17,7 @@ function App() {
     
     <Route path='/' element={<Layout/>}>
     <Route path="/" element={<Home/>} />
+    <Route path="/profile" element={<Profile/>} />
     </Route>
       
         {/* <Route path="/about" element={<About />} />

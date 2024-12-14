@@ -2,6 +2,7 @@ import React from 'react';
 import './home.scss';
 import Atention from '../Attention/Attention';
 import Button from '../../UI/Button/Button';
+import { Link } from 'react-router';
 
 export default function Home() {
   const [isElephant,  setIsElephant] = React.useState(true)
@@ -10,12 +11,16 @@ export default function Home() {
       {/* home top section */}
       <div className="home__top">
         <div className="home__heading">
-          <div className="home__heading_left">
+        <Link to={'/profile'}>
+        <div className="home__heading_left">
+            
             <div className="avatar">
               <img src="/avatar1.png" alt="avatar" />
             </div>
             <h3>Viktor Kotov</h3>
           </div>
+        </Link>
+         
           <div className="home__heading_right">
             <h4>12 522</h4>
             <img src="/star.png" alt="" />
