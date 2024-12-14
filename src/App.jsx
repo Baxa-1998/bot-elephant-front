@@ -3,7 +3,7 @@ import Header from './components/shared/Header/Header';
 import Home from './components/shared/Home/Home';
 
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
-import { Layout } from './Layout/Layout';
+import { Layout } from './components/shared/Layout/Layout';
 
 
 
