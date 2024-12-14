@@ -3,7 +3,8 @@ import Header from './components/shared/Header/Header';
 import Home from './components/shared/Home/Home';
 
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
-import Layout from './layout/layout';
+import { Layout } from "./Layout/Layout";
+
 
 
 function App() {
