@@ -52,4 +52,26 @@
       color: var(--primary-color);
     }
   }
+  .home__bottom{
+    width: 90%;
+    margin: auto;
+ 
+    .home__start{
+      margin-top: 14px;
+      h4{
+        font-family: var(--monsterrat-font);
+        font-weight: 600;
+        font-size: 24px;
+
+      }
+      p{
+        margin-top: 8px;
+        font-size: 18px;
+
+      }
+    }
+
+  }
+
+  
 }

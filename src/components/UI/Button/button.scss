@@ -1,0 +1,18 @@
+.btn{
+  width: 90%;
+  height: 51px;
+  background: linear-gradient(90deg, #EC9827, #FEAC3E);
+  backdrop-filter: blur(20px);
+  margin-left: 50%;
+  transform: translate(-50%);
+  border-radius: 50px;
+  color: #FFFFFF;
+  font-family: var(--inter-font);
+  font-weight: 700;
+  font-size: 20px;
+  transition: .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+ 
+  &:hover{
+    box-shadow: 5px 3px 10px 2px #EC9827;
+  }
+}

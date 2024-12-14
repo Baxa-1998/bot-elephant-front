@@ -1,40 +1,45 @@
-import React from 'react'
-import './home.scss'
-import Atention from '../Attention/Attention'
+import React from 'react';
+import './home.scss';
+import Atention from '../Attention/Attention';
+import Button from '../../UI/Button/Button';
 
 export default function Home() {
+  const [isElephant,  setIsElephant] = React.useState(true)
   return (
-    <section className='home'>
+    <section className="home">
       {/* home top section */}
       <div className="home__top">
-      <div className='home__heading'>
-      <div className='home__heading_left'>
-        <div className='avatar'>
-          <img src="/avatar1.png" alt="avatar" /> 
-         
-
+        <div className="home__heading">
+          <div className="home__heading_left">
+            <div className="avatar">
+              <img src="/avatar1.png" alt="avatar" />
+            </div>
+            <h3>Viktor Kotov</h3>
+          </div>
+          <div className="home__heading_right">
+            <h4>12 522</h4>
+            <img src="/star.png" alt="" />
+          </div>
         </div>
-        <h3>Viktor Kotov</h3>
+        <div className="w-full h-full flex items-center justify-center">
+          <Atention />
+        </div>
       </div>
-      <div className='home__heading_right'>
-         <h4>12 522</h4> 
-         <img src="/star.png" alt="" />
-      </div>
-     </div>
-     <div className='w-full h-full flex items-center justify-center'>
-     <Atention/>
-     </div>
-   
-      </div>
-     {/* home bottom section */}
-     <div className="home__bottom">
-
-     </div>
-  
-  
-   
+      {/* home bottom section */}
+      <div className="home__bottom">
+        {isElephant ?     <div className="home__start">
+          <h4>О вашем слоне:</h4>
+          <p>Приглашай друзей и получай 50% <br /> с каждой продажи слона !</p>
+          <div className='mt-[45px]'>
+          <Button>Купить слона</Button>
+          </div>
+        
+        </div> :    <div className='home__active'>
+          Active
+        </div> }
     
-
+     
+      </div>
     </section>
-  )
+  );
 }
