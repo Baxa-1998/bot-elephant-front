@@ -3,7 +3,7 @@ import Header from './components/shared/Header/Header';
 import Home from './components/shared/Home/Home';
 
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
-import { Layout } from "./Layout/Layout";
+
 
 
 
@@ -13,12 +13,12 @@ function App() {
     <Router>
     <Routes>
     
-      <Route path="/" element={<Layout/>}>
+    
         <Route path="/" element={<Home/>} />
         {/* <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<NotFound />} /> */}
-      </Route>
+ 
     </Routes>
   </Router>
  
