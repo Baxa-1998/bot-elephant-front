@@ -1,8 +1,9 @@
 import './App.scss';
 import Header from './components/shared/Header/Header';
 import Home from './components/shared/Home/Home';
-import Layout from './layout/layout';
+
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import Layout from './layout/layout';
 
 function App() {
   return (
@@ -10,7 +11,7 @@ function App() {
     <Router>
     <Routes>
     
-      <Route path="/" element={<Layout />}>
+      <Route path="/" element={<Layout/>}>
         <Route path="/" element={<Home/>} />
         {/* <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
