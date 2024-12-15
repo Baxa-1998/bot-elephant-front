@@ -6,7 +6,7 @@ import Header from '../Header/Header'
 export const Layout = () => {
   return (
     <div className='max-w-[440px] m-auto'>
-      <Header/>
+      {/* <Header/> */}
       
       <main className='h-dvh'>
       <Outlet/>
