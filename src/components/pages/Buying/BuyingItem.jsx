@@ -1,5 +1,6 @@
 import React from 'react';
 import './buying.scss';
+import Button from '../../UI/Button/Button';
 
 export default function BuyingItem() {
  
@@ -24,7 +25,7 @@ export default function BuyingItem() {
         </div>
         <div className="buying__friends">
           <h4>
-            После покупки слона вашими друзьями <br /> вы  получите{' '}
+            После покупки слона вашими друзьями  вы  получите{' '}
             <b >
               150 
               <img src="/star.png" alt="star" />
@@ -32,6 +33,10 @@ export default function BuyingItem() {
          
           </h4>
         </div>
+        <div className='buying__btn'>
+        <Button className={'flex items-center'}>Купить <span className='ml-[48px]'>150</span> <img className='ml-[8px]' src="/white-star.png" alt="white-star" /></Button>
+        </div>
+      
       </div>
     </div>
   );

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './buying.scss';
 import UserInfo from '../../shared/UserInfo/UserInfo';
 import BuyingItem from './BuyingItem';
@@ -8,8 +8,10 @@ import 'swiper/css/navigation';
 import { Navigation } from 'swiper/modules';
 
 export default function Buying() {
-  const prevRef = useRef(null);
-  const nextRef = useRef(null);
+  const data = useState([{
+    
+  }])
+
 
   return (
     <section className="buying">
