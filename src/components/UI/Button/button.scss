@@ -1,5 +1,8 @@
 .btn{
-  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 95%;
   height: 51px;
   background: linear-gradient(90deg, #EC9827, #FEAC3E);
   backdrop-filter: blur(20px);
@@ -7,8 +10,8 @@
   transform: translate(-50%);
   border-radius: 50px;
   color: #FFFFFF;
-  font-family: var(--inter-font);
-  font-weight: 700;
+  font-family: var(--monsterrat-font);
+  font-weight: 600;
   font-size: 20px;
   transition: .3s cubic-bezier(0.075, 0.82, 0.165, 1);
  

@@ -3,7 +3,8 @@ import './home.scss';
 import Atention from '../Attention/Attention';
 import Button from '../../UI/Button/Button';
 import { Link } from 'react-router';
-import HomeHeader from './HomeHeader';
+
+import UserInfo from '../UserInfo/UserInfo';
 
 export default function Home() {
   const [isElephant,  setIsElephant] = React.useState(true)
@@ -11,23 +12,7 @@ export default function Home() {
     <section className="home">
       {/* home top section */}
       <div className="home__top">
-        <div className="home__heading">
-        {/* <Link to={'/profile'}>
-        <div className="home__heading_left">
-            
-            <div className="avatar">
-              <img src="/avatar1.png" alt="avatar" />
-            </div>
-            <h3>Viktor Kotov</h3>
-          </div>
-        </Link> */}
-        <HomeHeader/>
-         
-          <div className="home__heading_right">
-            <h4>12 522</h4>
-            <img src="/star.png" alt="" />
-          </div>
-        </div>
+   <UserInfo/>
         <div className="w-full h-full flex items-center justify-center">
           <Atention />
         </div>

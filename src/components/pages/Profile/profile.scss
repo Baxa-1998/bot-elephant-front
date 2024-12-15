@@ -1,0 +1,34 @@
+.profile{
+   background: #F9F9F9; 
+   padding-top: 18px;
+   .statistics{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: auto;
+    margin-top: 30px;
+  
+    h4{
+      border-bottom: 1px solid #CACACA;
+    }
+    .statistics__item{
+     
+      display: flex;
+      justify-content: space-between;
+      padding-top: 12px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid #CACACA;
+      h3{
+        font-size: 18px;
+
+      }
+      p{
+        font-size: 18px; 
+        font-weight: 600;
+      }
+    }
+ 
+    
+   }
+
+}
