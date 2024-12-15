@@ -7,6 +7,7 @@ export const Layout = () => {
   return (
     <div className='max-w-[440px] m-auto'>
       <Header/>
+      
       <main className='h-dvh'>
       <Outlet/>
       </main>
