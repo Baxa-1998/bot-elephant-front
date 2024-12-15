@@ -3,6 +3,7 @@ import './home.scss';
 import Atention from '../Attention/Attention';
 import Button from '../../UI/Button/Button';
 import { Link } from 'react-router';
+import HomeHeader from './HomeHeader';
 
 export default function Home() {
   const [isElephant,  setIsElephant] = React.useState(true)
@@ -11,7 +12,7 @@ export default function Home() {
       {/* home top section */}
       <div className="home__top">
         <div className="home__heading">
-        <Link to={'/profile'}>
+        {/* <Link to={'/profile'}>
         <div className="home__heading_left">
             
             <div className="avatar">
@@ -19,7 +20,8 @@ export default function Home() {
             </div>
             <h3>Viktor Kotov</h3>
           </div>
-        </Link>
+        </Link> */}
+        <HomeHeader/>
          
           <div className="home__heading_right">
             <h4>12 522</h4>
