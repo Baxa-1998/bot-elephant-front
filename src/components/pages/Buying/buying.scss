@@ -112,7 +112,7 @@
    }
    .swiper {
     width: 95%;
-    height: 563px;
+    height: 650px;
     
     border-radius: 33px;
      position: absolute; 
@@ -120,7 +120,7 @@
      left: 50%;
      transform: translate(-50%, -50%);
      background: none;
-     overflow:visible;
+     overflow: hidden;
   }
   
   .swiper-slide {
