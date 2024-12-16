@@ -4,14 +4,22 @@ import './userInfo.scss'
 export default function UserInfo() {
   const location = useLocation()
   const navigate = useNavigate()
+  const handleBack = () => {
+    if(location.pathname !== '/'){
+      navigate(-1); 
+    }
+    navigate('/')
+
+    
+  };
   
   return (
     <div className="home__heading">
    
     <Link to={'/profile'}>
       <div className="home__heading_left"> 
-         {location.pathname === '/buying' &&      <img src="/arrow-white.svg" alt="arrow-white" /> }
-          
+         {location.pathname === '/buying' &&      <img onClick={handleBack} src="/arrow-white.svg" alt="arrow-white" /> }
+         {location.pathname === '/profile' &&      <img onClick={handleBack} className='text-black bg-[black]' src="/arrow-white.svg" alt="arrow-white" /> }
         <div className="avatar">
           <img src="/avatar1.png" alt="avatar" />
         </div>
