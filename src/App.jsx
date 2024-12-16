@@ -6,11 +6,22 @@ import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import { Layout } from './components/shared/Layout/Layout';
 import Profile from './components/pages/Profile/Profile';
 import Buying from './components/pages/Buying/Buying';
+import { useEffect } from 'react';
+import { useTelegram } from './hooks/useTelegram';
 
 
 
 
 function App() {
+
+const telegram = useTelegram()
+
+  useEffect(() => {
+    telegram.expand();
+    telegram.disableVerticalSwipes();
+    telegram.setBackgroundColor('#000');
+    telegram.setHeaderColor('#000');
+  }, []);
   return (
  
     <Router>
