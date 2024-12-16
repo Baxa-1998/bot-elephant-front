@@ -1,5 +1,5 @@
 import './App.scss';
-import Header from './components/shared/Header/Header';
+
 import Home from './components/shared/Home/Home';
 
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
@@ -7,6 +7,7 @@ import { Layout } from './components/shared/Layout/Layout';
 import Profile from './components/pages/Profile/Profile';
 import Buying from './components/pages/Buying/Buying';
 import { useEffect } from 'react';
+import Bought from './components/pages/Bought/Bought';
 
 
 
@@ -14,7 +15,8 @@ import { useEffect } from 'react';
 
 function App() {
 
-  const telegram = window.Telegram.WebApp;
+  const telegram = window.Telegram.WebApp; 
+
 
 
   useEffect(() => {
@@ -33,6 +35,7 @@ function App() {
     <Route path="/" element={<Home/>} />
     <Route path="/profile" element={<Profile/>} />
     <Route path="/buying" element={<Buying/>} />
+    <Route path='/bought' element={<Bought/>}/>
     </Route>
       
         {/* <Route path="/about" element={<About />} />

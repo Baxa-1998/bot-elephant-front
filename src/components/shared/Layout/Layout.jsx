@@ -1,17 +1,22 @@
 import React from 'react'
 
 import { Outlet } from 'react-router'
-import Header from '../Header/Header'
+
 import '../../../App.scss'
+import { AppProvider } from '../../../context/infoCTX'
+import Bg from '../Bg/Bg'
 export const Layout = () => {
   return (
-    <div className='wrapper'>
-      {/* <Header/> */}
-      
+    <AppProvider>
+          <div className='wrapper'>
+   
       <main>
       <Outlet/>
       </main>
 
     </div>
+
+    </AppProvider>
+
   )
 }

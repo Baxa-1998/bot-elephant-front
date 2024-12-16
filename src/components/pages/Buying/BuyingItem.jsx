@@ -1,18 +1,19 @@
 import React from 'react';
 import './buying.scss';
 import Button from '../../UI/Button/Button';
+import { Link } from 'react-router';
 
-export default function BuyingItem({item}) {
-  console.log(item);
-  
- 
-  
+export default function BuyingItem({ item, getElephantInfo }) {
+
 
   return (
     <div className="buying__item">
       <div className="buying__item_img">
-        {item.active ? <img src={item.activeImg} alt="elephant" /> : <img src={item.notActiveImg} alt="elephant" /> }
-
+        {item.active ? (
+          <img src={item.activeImg} alt="elephant" />
+        ) : (
+          <img src={item.notActiveImg} alt="elephant" />
+        )}
       </div>
       <div className="buying__item_info">
         <div className="buying__lvl">
@@ -28,18 +29,27 @@ export default function BuyingItem({item}) {
         </div>
         <div className="buying__friends">
           <h4>
-            После покупки слона вашими друзьями  вы  получите{' '}
-            <b >
-              {item.stars} 
+            После покупки слона вашими друзьями вы получите{' '}
+            <b>
+              {item.stars}
               <img src="/star.png" alt="star" />
             </b>
-         
           </h4>
         </div>
-        <div className='buying__btn'>
-        <Button className={'flex items-center'}>Купить <span className='ml-[48px]'>{item.price}</span> <img className='ml-[8px]' src="/white-star.png" alt="white-star" /></Button>
+        <div className="buying__btn">
+          {item.active ? (
+            <Link to={'/bought'}>
+              <Button onClick={() => getElephantInfo(item)} className={'flex items-center'}>
+                Купить <span className="ml-[48px]">{item.price}</span>{' '}
+                <img className="ml-[8px]" src="/white-star.png" alt="white-star" />
+              </Button>
+            </Link>
+          ) : (
+            <Button className={'flex items-center !text-[12px]'}>
+              Разблокируется после покупки предыдущего
+            </Button>
+          )}
         </div>
-      
       </div>
     </div>
   );

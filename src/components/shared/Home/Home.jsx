@@ -1,13 +1,18 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './home.scss';
 import Atention from '../Attention/Attention';
 import Button from '../../UI/Button/Button';
 import { Link } from 'react-router';
 
 import UserInfo from '../UserInfo/UserInfo';
+import { useAppContext } from '../../../context/infoCTX';
+
+
 
 export default function Home() {
   const [isElephant, setIsElephant] = React.useState(true);
+  const {elephants} = useAppContext()
+
   return (
     <section className="home">
       {/* home top section */}
