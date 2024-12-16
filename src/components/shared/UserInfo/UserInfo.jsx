@@ -9,7 +9,9 @@ export default function UserInfo() {
     <div className="home__heading">
    
     <Link to={'/profile'}>
-      <div className="home__heading_left">
+      <div className="home__heading_left"> 
+         {location.pathname === '/buying' &&      <img src="/arrow-white.svg" alt="arrow-white" /> }
+   
         <div className="avatar">
           <img src="/avatar1.png" alt="avatar" />
         </div>
