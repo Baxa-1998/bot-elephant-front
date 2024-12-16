@@ -34,7 +34,7 @@ export default function Home() {
                   Зарабатывайте от <br /> 50% вместе со слоном !
                 </h4>
               </div>
-              <div className="w-[90%] m-auto mt-[16px]">
+              <div className="w-[95%] m-auto mt-[16px]">
                 <p className="text-[18px]">
                   Продавайте слона, и зарабатывайте <br /> на друзьях которым его продали !
                 </p>
