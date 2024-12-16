@@ -2,10 +2,10 @@ import React from 'react'
 
 import { Outlet } from 'react-router'
 import Header from '../Header/Header'
-
+import '../../../App.scss'
 export const Layout = () => {
   return (
-    <div className='max-w-[393px] m-auto'>
+    <div className='wrapper'>
       {/* <Header/> */}
       
       <main>
