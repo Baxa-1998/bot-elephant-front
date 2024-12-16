@@ -18,13 +18,7 @@ export default function Bought() {
         <UserInfo />
       </div>
       <Swiper
-        // onInit={(swiper) => {
-
-        //   swiper.params.navigation.prevEl = prevRef.current;
-        //   swiper.params.navigation.nextEl = nextRef.current;
-        //   swiper.navigation.init();
-        //   swiper.navigation.update();
-        // }}
+    
         modules={[Navigation]}
         navigation={true}
         className="mySwiper">
