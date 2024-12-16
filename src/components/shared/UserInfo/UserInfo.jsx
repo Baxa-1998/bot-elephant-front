@@ -19,7 +19,7 @@ export default function UserInfo() {
     <Link to={'/profile'}>
       <div className="home__heading_left"> 
          {location.pathname === '/buying' &&      <img onClick={handleBack} src="/arrow-white.svg" alt="arrow-white" /> }
-         {location.pathname === '/profile' &&      <img onClick={handleBack} className='text-black bg-[black]' src="/arrow-white.svg" alt="arrow-white" /> }
+         {location.pathname === '/profile' &&      <img onClick={handleBack} src="/arrow-left.png" alt="arrow-white" /> }
         <div className="avatar">
           <img src="/avatar1.png" alt="avatar" />
         </div>

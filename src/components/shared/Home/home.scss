@@ -4,14 +4,15 @@
   padding-bottom: 30px;
   .home__top{
     height: 498px; 
-    background: url('../../../assets/main-bg.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    // background: url('../../../assets/main-bg.png');
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    // background-position: center;
     padding-top: 9px;
     padding-bottom: 50px;
     border-bottom-right-radius: 50px;
     border-bottom-left-radius: 50px;
+    background: var(--primary-color);
   }
  
   .home__bottom{
