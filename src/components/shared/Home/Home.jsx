@@ -14,7 +14,7 @@ export default function Home() {
       <div className="home__top">
         <UserInfo />
         <div className="w-full h-full flex items-center justify-center">
-          <img className='w-[100%]' src="/main-elephant.png" alt="" />
+          <img className='w-[393px] h-[426px]' src="/main-elephant.png" alt="" />
         </div>
       </div>
       {/* home bottom section */}
