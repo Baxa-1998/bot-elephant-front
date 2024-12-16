@@ -1,9 +1,9 @@
 import React from 'react'
-import { Link, useLocation } from 'react-router'
+import { Link, useLocation, useNavigate } from 'react-router'
 import './userInfo.scss'
 export default function UserInfo() {
   const location = useLocation()
-  
+  const navigate = useNavigate()
   
   return (
     <div className="home__heading">
@@ -11,7 +11,7 @@ export default function UserInfo() {
     <Link to={'/profile'}>
       <div className="home__heading_left"> 
          {location.pathname === '/buying' &&      <img src="/arrow-white.svg" alt="arrow-white" /> }
-   
+          
         <div className="avatar">
           <img src="/avatar1.png" alt="avatar" />
         </div>
