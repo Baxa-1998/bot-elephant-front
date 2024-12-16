@@ -11,7 +11,8 @@ export default function BuyingItem({item}) {
   return (
     <div className="buying__item">
       <div className="buying__item_img">
-        <img src={item.img} alt="elephant" />
+        {item.active ? <img src={item.activeImg} alt="elephant" /> : <img src={item.notActiveImg} alt="elephant" /> }
+
       </div>
       <div className="buying__item_info">
         <div className="buying__lvl">
