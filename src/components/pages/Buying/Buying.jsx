@@ -17,7 +17,15 @@ export default function Buying() {
 
   //добавление данных в state
   function getElephantInfo(data) {
-    setElephants((prevElephants) => [...prevElephants, data]);
+    // если слон уже есть в массиве
+    const existElephant = elephants.some(item => item.level === data.level)
+    if(existElephant){
+      alert('У вас уже есть этот слон')
+    }else{
+      setElephants((prevElephants) => [...prevElephants, data]);   
+    }
+
+    
   }
 
   return (
