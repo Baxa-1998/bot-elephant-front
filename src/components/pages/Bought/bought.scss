@@ -1,7 +1,7 @@
 .bought{
   position: relative;
   width: 100%;
-  // height: 100vh;
+  height: 90vh;
   padding-bottom: 33px;
   .bought__top{
     width: 100%;
@@ -15,6 +15,104 @@
     border-bottom-left-radius: 50px;
    
   }
+  .buying__item{
+    width: 95%;
+    height: 563px;
+    
+    border-radius: 33px;
+     position: absolute; 
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, 4%);  
+     
+  
+    .buying__item_img{
+      
+      position: absolute;
+      z-index: 1;
+    }
+    .buying__item_info{
+      position: absolute;
+      width: 100%;
+      height: 437px;
+      top: 163px;
+      background-color: rgba(255, 255, 255, 0.5); 
+      border: 1px solid #FDAB3C;
+      border-radius: 33px;
+      padding-bottom: 18px;
+    
+      
+      .buying__lvl{
+        // display: flex;
+        // justify-content: space-between;
+        // align-items: center;
+        margin-top: 150px;
+        transition: .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+        z-index: 99;
+        position: sticky;
+        span{
+          font-family: var(--monsterrat-font); 
+          font-weight: 700;
+          font-size: 32px;
+        }
+        img{
+          
+          cursor: pointer;
+          &:hover{
+            opacity: 80%;
+          }
+        }
+      }
+      .buying__discount{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: auto;
+        margin-top: 17px;
+        border-radius: 35px;
+        width: 90%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        
+
+        background: var(--text-color); 
+        color: var(--primary-color);
+        h4{
+          font-size: 30px;
+          font-weight: 700;
+        }
+        p{
+          font-size: 15px;
+
+        }
+
+      }
+    }
+    .buying__friends{
+     
+      width: 95%;
+      margin: auto;
+      margin-top: 12px;
+      img{
+        display: inline;
+        margin-bottom: 5px;
+        margin-left: 5px;
+        
+      }
+      b{
+        color: var(--primary-color);
+        font-size: 18px;
+      }
+   
+      h4{
+        
+        text-align: center;
+      }
+    }
+    .buying__btn{
+      margin-top: 25px;
+    }
+   }
   .bought__item{
   .bought__item_img{
     margin-top: 98px;

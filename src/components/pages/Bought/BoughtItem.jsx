@@ -4,12 +4,18 @@ import Button from '../../UI/Button/Button';
 import { Link } from 'react-router';
 import './bought.scss';
 export default function BoughtItem({ item }) {
+ 
+  
   
   return (
-    <div className="bought__item">
-      <div className="bought__item_img">
+    <div className="bought__item"> 
+
+   
+       <div className='bought__avaliable'>
+       <div className="bought__item_img">
         <img src={item.activeImg} alt="elephant" />
       </div>
+   
       <div className="bought__item_lvl">
         <h3>Слон</h3>
         <p>{item.level} lvl</p>
@@ -37,7 +43,7 @@ export default function BoughtItem({ item }) {
           <p>Пригласить 5 друзей </p>
           <p>0 / 5</p>
         </div>
-        <div></div>
+       
       </div>
       <div className="w-full h-[1px] bg-[#CACACA] mt-[16px]"></div>
       <div className="bought__advantage">
@@ -46,8 +52,11 @@ export default function BoughtItem({ item }) {
           <h3>Бонус от продаж</h3>
           <p>+ 50%</p>
         </div>
-        <div></div>
+      
       </div>
+        
+        </div>
+   
 
       {/* <div>
         <Link to={'/buying'}>
