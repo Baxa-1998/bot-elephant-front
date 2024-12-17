@@ -39,13 +39,13 @@ export default function BuyingItem({ item, getElephantInfo }) {
         <div className="buying__btn">
           {item.active ? (
             <Link to={'/bought'}>
-              <Button onClick={() => getElephantInfo(item)} className={'flex items-center'}>
+              <Button onClick={() => getElephantInfo(item)} className={'flex items-center !w-[95%]'}>
                 Купить <span className="ml-[48px]">{item.price}</span>{' '}
                 <img className="ml-[8px]" src="/white-star.png" alt="white-star" />
               </Button>
             </Link>
           ) : (
-            <Button className={'flex items-center !text-[12px]'}>
+            <Button className={'flex items-center !text-[12px] !w-[95%]'}>
               Разблокируется после покупки предыдущего
             </Button>
           )}
