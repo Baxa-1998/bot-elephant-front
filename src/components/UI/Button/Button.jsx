@@ -1,10 +1,15 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import './button.scss'
 import { useLocation } from 'react-router'
-export default function Button({children, className, ...props}) {
+const Button = React.memo(({ children, className, ...props }) => {
  
 
+
   return (
-    <button className={`btn ${className}`} {...props}>{children}</button>
-  )
-}
+    <button className={`btn ${className}`} {...props}>
+      {children}
+    </button>
+  );
+});
+
+export default Button;

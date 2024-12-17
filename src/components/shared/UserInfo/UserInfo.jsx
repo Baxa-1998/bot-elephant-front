@@ -21,7 +21,7 @@ export default function UserInfo() {
             <img onClick={handleBack} src="/arrow-white.svg" alt="arrow-white" />
           ) : null}
           {location.pathname === '/profile' && (
-            <img onClick={handleBack} src="/arrow-left.png" alt="arrow-white" />
+            <img onClick={handleBack} src="/arrow-black.svg" alt="arrow-white" />
           )}
           {location.pathname === '/buying' && (
             <img onClick={handleBack} src="/arrow-white.svg" alt="arrow-white" />
