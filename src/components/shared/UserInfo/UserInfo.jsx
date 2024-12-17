@@ -5,7 +5,7 @@ import { useAppContext } from '../../../context/infoCTX';
 export default function UserInfo() {
   const location = useLocation();
   const navigate = useNavigate();
-  const { hasElephant } = useAppContext();
+  const { hasElephant, user, stars } = useAppContext();
   const handleBack = () => {
     if (location.pathname !== '/') {
       navigate(-1);
@@ -40,12 +40,12 @@ export default function UserInfo() {
             <img src="/avatar1.png" alt="avatar" />
           </div>
           <h3 className={`${location.pathname === '/profile' ? 'text-black' : ''}`}>
-            Viktor Kotov
+            {user}
           </h3>
         </div>
    
           {hasElephant &&    <div className="home__heading_right">
-        <h4>12 522</h4>
+        <h4>{stars}</h4>
         <img src="/star.png" alt="" />
       </div> }
    

@@ -7,9 +7,10 @@ export const useAppContext = () => {
 };
 
 export const AppProvider = ({ children }) => {
+  const [user, setUser] = useState('Viktor Kotov')
   const [hasElephant, setHasElephant] = useState(false);
   const [elephants, setElephants] = useState([]);
-  const [stars, setStars] = useState(550);
+  const [stars, setStars] = useState(149);
   const [friends, setFriends] = useState(0);
 
   return (
@@ -23,6 +24,8 @@ export const AppProvider = ({ children }) => {
         setFriends,
         hasElephant,
         setHasElephant,
+        user, 
+        setUser
       }}>
       {children}
     </AppContext.Provider>
