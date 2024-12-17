@@ -12,14 +12,21 @@ export default function UserInfo() {
     }
     navigate('/');
   };
+  const isCheckElephant = () =>{
+    if(!hasElephant) {
+      return;
+    }
+    navigate('/profile')
+
+  }
 
   return (
     <div className="home__heading">
-      <Link to={'/profile'}>
-        <div className="home__heading_left">
-          {location.pathname === '/' && hasElephant ? (
+      
+        <div onClick={isCheckElephant} className="home__heading_left">
+          {/* {location.pathname === '/' && hasElephant ? (
             <img onClick={handleBack} src="/arrow-white.svg" alt="arrow-white" />
-          ) : null}
+          ) : null} */}
           {location.pathname === '/profile' && (
             <img onClick={handleBack} src="/arrow-black.svg" alt="arrow-white" />
           )}
@@ -36,12 +43,12 @@ export default function UserInfo() {
             Viktor Kotov
           </h3>
         </div>
-      </Link>
-
-      <div className="home__heading_right">
+   
+          {hasElephant &&    <div className="home__heading_right">
         <h4>12 522</h4>
         <img src="/star.png" alt="" />
-      </div>
+      </div> }
+   
     </div>
   );
 }

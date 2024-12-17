@@ -25,7 +25,7 @@ export default function Home() {
         ) : (
           <div className="w-full h-full">
             <div className="w-full h-full flex items-center justify-center">
-              <img className="w-[393px] h-[426px]" src="/main-elephant.png" alt="" />
+              <img className="w-[393px] h-[426px]" src="/main-elephant.png" alt="elephant" />
             </div>
             <div className="home__bottom">
               <div className="home__start">
