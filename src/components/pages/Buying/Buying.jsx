@@ -10,26 +10,28 @@ import { useAppContext } from '../../../context/infoCTX';
 import { data } from '../../../data';
 
 export default function Buying() {
-  const { elephants, setElephants,setHasElephant } = useAppContext();
+  const { setHasElephant ,elephantsData, setElephantsData,} = useAppContext();
   
   // Массив данных (слоны)
-  const [elephantsData, setElephantsData, ] = useState(data);
+  // const [elephantsData, setElephantsData, ] = useState(data);
+ 
+  
 
   //добавление данных в state
-  function getElephantInfo(data) {
-    // если слон уже есть в массиве
-    const existElephant = elephants.some(item => item.level === data.level)
-    if(existElephant){
-      alert('У вас уже есть этот слон')
-    }else{
-      setElephants((prevElephants) => [...prevElephants, data]); 
-      // если слон куплен убираем стартовую страницу
-      setHasElephant(true)
+  // function getElephantInfo(data) {
+  //   // если слон уже есть в массиве
+  //   const existElephant = elephants.some(item => item.level === data.level)
+  //   if(existElephant){
+  //     alert('У вас уже есть этот слон')
+  //   }else{
+  //     setElephants((prevElephants) => [...prevElephants, data]); 
+  //     // если слон куплен убираем стартовую страницу
+  //     setHasElephant(true)
 
-    }
+  //   }
 
     
-  }
+  // }
 
   return (
     <section className="buying">
@@ -49,7 +51,7 @@ export default function Buying() {
         className="mySwiper">
         {elephantsData.map((item) => (
           <SwiperSlide>
-            <BuyingItem getElephantInfo={getElephantInfo} item={item} />
+            <BuyingItem setHasElephant={setHasElephant} item={item} />
           </SwiperSlide>
         ))}
       </Swiper>

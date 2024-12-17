@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useState } from 'react';
+import { data } from '../data';
 
 const AppContext = createContext();
 
@@ -9,17 +10,19 @@ export const useAppContext = () => {
 export const AppProvider = ({ children }) => {
   const [user, setUser] = useState('Viktor Kotov')
   const [hasElephant, setHasElephant] = useState(false);
-  const [elephants, setElephants] = useState([]);
+  // const [elephants, setElephants] = useState([]);
   const [stars, setStars] = useState(149);
-  const [friends, setFriends] = useState(0);
+  const [friends, setFriends] = useState(0); 
+  const [elephantsData, setElephantsData] = useState(data);
 
   return (
     <AppContext.Provider
       value={{
-        elephants,
+   
         stars,
         friends,
-        setElephants,
+        elephantsData, 
+        setElephantsData,
         setStars,
         setFriends,
         hasElephant,

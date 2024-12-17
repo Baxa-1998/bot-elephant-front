@@ -8,7 +8,7 @@ import 'swiper/css/navigation';
 import { Navigation } from 'swiper/modules';
 import BoughtItem from './BoughtItem';
 export default function Bought() {
-  const {elephants} = useAppContext()
+  const {elephantsData} = useAppContext()
   
   
   
@@ -22,7 +22,7 @@ export default function Bought() {
         modules={[Navigation]}
         navigation={true}
         className="mySwiper">
-        {elephants.map((item) => (
+        {elephantsData.map((item) => (
           <SwiperSlide>
             <BoughtItem  item={item} />
           </SwiperSlide>

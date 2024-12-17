@@ -4,6 +4,7 @@ import Button from '../../UI/Button/Button';
 import { Link } from 'react-router';
 import './bought.scss';
 export default function BoughtItem({ item }) {
+  
   return (
     <div className="bought__item">
       <div className="bought__item_img">
@@ -48,11 +49,11 @@ export default function BoughtItem({ item }) {
         <div></div>
       </div>
 
-      <div>
+      {/* <div>
         <Link to={'/buying'}>
           <Button className={'!text-[#000000] !rounded-lg mt-[20px]'}>Купить слона</Button>
         </Link>
-      </div>
+      </div> */}
     </div>
   );
 }
