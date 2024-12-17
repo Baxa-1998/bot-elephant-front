@@ -33,6 +33,22 @@ export default function Buying() {
     
   // }
 
+
+
+  const handleBuy = () => {
+    setElephantsData((prevData) => {
+      const updatedData = [...prevData];
+     
+      const nextInactiveElephant = updatedData.find((item) => !item.active);
+      if (nextInactiveElephant) {
+      
+        nextInactiveElephant.active = true;
+        setHasElephant(true)
+      }
+      return updatedData;
+    });
+  };
+
   return (
     <section className="buying">
       <div className="buying__top">
@@ -51,7 +67,7 @@ export default function Buying() {
         className="mySwiper">
         {elephantsData.map((item) => (
           <SwiperSlide>
-            <BuyingItem setHasElephant={setHasElephant} item={item} />
+            <BuyingItem setHasElephant={setHasElephant} handleBuy={handleBuy} item={item} />
           </SwiperSlide>
         ))}
       </Swiper>

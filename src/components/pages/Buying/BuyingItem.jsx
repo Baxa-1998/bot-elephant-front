@@ -2,10 +2,48 @@ import React from 'react';
 import './buying.scss';
 import Button from '../../UI/Button/Button';
 import { Link } from 'react-router';
+import { useAppContext } from '../../../context/infoCTX';
 
-export default function BuyingItem({ item, setHasElephant }) {
-  
+export default function BuyingItem({ item }) {
+  const { setHasElephant, setElephantsData } = useAppContext();
 
+  const handleClick = (data) => {
+    handlePurchase(data);
+    
+  };
+  function handlePurchase(data) {
+    console.log(data);
+    handleBuy()
+    
+
+    setElephantsData((prevData) => {
+     
+      const updatedData = prevData.map((item) => {
+        if (item.id === data.id) {
+    
+        
+          
+          return { ...item, purchased: true };
+        }
+        
+        return item;
+      });
+
+      return updatedData; 
+    });
+  }
+  const handleBuy = () => {
+    setElephantsData((prevData) => {
+      const updatedData = [...prevData];
+      const nextInactiveElephant = updatedData.find((item) => !item.active);
+      if (nextInactiveElephant) {
+        nextInactiveElephant.active = true;
+
+        setHasElephant(true);
+      }
+      return updatedData;
+    });
+  };
 
   return (
     <div className="buying__item">
@@ -40,11 +78,13 @@ export default function BuyingItem({ item, setHasElephant }) {
         <div className="buying__btn">
           {item.active ? (
             <Link to={'/'}>
-              <Button onClick={() => setHasElephant(true)} className={'flex items-center !w-[95%]'}>
+     <Button onClick={() => handleClick(item)} className={'flex items-center !w-[95%]'}>
                 Купить <span className="ml-[48px]">{item.price}</span>{' '}
                 <img className="ml-[8px]" src="/white-star.png" alt="white-star" />
               </Button>
             </Link>
+         
+          
           ) : (
             <Button className={'flex items-center !text-[12px] !w-[95%]'}>
               Разблокируется после покупки предыдущего

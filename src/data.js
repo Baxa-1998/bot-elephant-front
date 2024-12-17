@@ -6,7 +6,8 @@ export const data = [
   activeImg: '/elephant/1.svg',
   stars: 150,
   price: 100, 
-  active: true
+  active: true, 
+  purchased: false
 },
 {
   id: 2,
@@ -16,7 +17,8 @@ export const data = [
   notActiveImg : '/elephant/2b.png',
   stars: 300,
   price: 200,
-  active: false
+  active: false,
+  purchased: false
 },
 {
   id: 3,
@@ -26,7 +28,8 @@ export const data = [
   notActiveImg : '/elephant/3b.png',
   stars: 450,
   price: 300,
-  active: false
+  active: false,
+  purchased: false
 
 },
 {
@@ -37,7 +40,8 @@ export const data = [
   notActiveImg : '/elephant/4b.png',
   stars: 600,
   price: 400, 
-  active: false
+  active: false,
+  purchased: false
 },
 {
   id: 5,
@@ -47,7 +51,8 @@ export const data = [
   notActiveImg : '/elephant/5b.png',
   stars: 750,
   price: 500, 
-  active: false
+  active: false,
+  purchased: false
 },
 {
   id: 6,
@@ -57,7 +62,8 @@ export const data = [
   notActiveImg : '/elephant/6b.png',
   stars: 900,
   price: 600, 
-  active: false
+  active: false,
+  purchased: false
 },
 {
   id: 7,
@@ -67,7 +73,8 @@ export const data = [
   notActiveImg : '/elephant/7b.png',
   stars: 1050,
   price: 700, 
-  active: false
+  active: false,
+  purchased: false
 },
 {
   id: 8,
@@ -77,7 +84,8 @@ export const data = [
   notActiveImg : '/elephant/8b.png',
   stars: 1200,
   price: 800, 
-  active: false
+  active: false,
+  purchased: false
 },
 {
   id: 9,
@@ -87,7 +95,8 @@ export const data = [
   notActiveImg : '/elephant/9b.png',
   stars: 1350,
   price: 900, 
-  active: false
+  active: false,
+  purchased: false
 },
 {
   id: 10,
@@ -97,7 +106,8 @@ export const data = [
   notActiveImg : '/elephant/10b.png',
   stars: 1500,
   price: 1000,
-  active: false
+  active: false,
+  purchased: false
 },
 
 ]

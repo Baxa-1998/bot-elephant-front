@@ -1,36 +1,31 @@
-import React from 'react'
-import './bought.scss'
-import UserInfo from '../../shared/UserInfo/UserInfo'
-import { useAppContext } from '../../../context/infoCTX'
+import React from 'react';
+import './bought.scss';
+import UserInfo from '../../shared/UserInfo/UserInfo';
+import { useAppContext } from '../../../context/infoCTX';
 import { SwiperSlide, Swiper } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { Navigation } from 'swiper/modules';
 import BoughtItem from './BoughtItem';
 import BuyingItem from '../Buying/BuyingItem';
+import Buying from '../Buying/Buying';
 export default function Bought() {
-  const {elephantsData} = useAppContext()
+  const { elephantsData } = useAppContext();
+
   
-  
-  
+
   return (
     <section className="bought">
       <div className="bought__top">
         <UserInfo />
       </div>
-      <Swiper
-    
-        modules={[Navigation]}
-        navigation={true}
-        className="mySwiper">
+      <Swiper modules={[Navigation]} navigation={true} className="mySwiper">
         {elephantsData.map((item) => (
           <SwiperSlide>
-            {item.active ?  <BoughtItem  item={item} />  : <BuyingItem item={item}/> }
-          
+            {item.purchased ? <BoughtItem item={item} /> : <BuyingItem item={item} />}
           </SwiperSlide>
         ))}
       </Swiper>
     </section>
   );
-  
 }
