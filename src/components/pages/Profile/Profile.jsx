@@ -27,7 +27,7 @@ export default function Profile() {
         </div>
       </div>
       <div className="mt-[28px]">
-        <Button className={'!text-[#262626]'}>
+        <Button className={'!text-[#262626] !w-[95%]'}>
           Вывести <img className="ml-[10px]" src="/black-star.png" alt="" />
         </Button>
         <p className="text-center mt-[9px]">Вывод доступен от 1 000 рублей</p>

@@ -10,10 +10,10 @@ import { useAppContext } from '../../../context/infoCTX';
 import { data } from '../../../data';
 
 export default function Buying() {
-  const { elephants, setElephants } = useAppContext();
+  const { elephants, setElephants,setHasElephant } = useAppContext();
   
   // Массив данных (слоны)
-  const [elephantsData, setElephantsData] = useState(data);
+  const [elephantsData, setElephantsData, ] = useState(data);
 
   //добавление данных в state
   function getElephantInfo(data) {
@@ -22,7 +22,10 @@ export default function Buying() {
     if(existElephant){
       alert('У вас уже есть этот слон')
     }else{
-      setElephants((prevElephants) => [...prevElephants, data]);   
+      setElephants((prevElephants) => [...prevElephants, data]); 
+      // если слон куплен убираем стартовую страницу
+      setHasElephant(true)
+
     }
 
     

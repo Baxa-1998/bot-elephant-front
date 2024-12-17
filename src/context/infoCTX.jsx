@@ -1,6 +1,5 @@
 import React, { createContext, useContext, useState } from 'react';
 
-
 const AppContext = createContext();
 
 export const useAppContext = () => {
@@ -8,13 +7,23 @@ export const useAppContext = () => {
 };
 
 export const AppProvider = ({ children }) => {
- 
-  const [elephants, setElephants] = useState([]); 
+  const [hasElephant, setHasElephant] = useState(false);
+  const [elephants, setElephants] = useState([]);
   const [stars, setStars] = useState(550);
-  const [friends, setFriends] = useState(0); 
+  const [friends, setFriends] = useState(0);
 
   return (
-    <AppContext.Provider value={{ elephants, stars, friends, setElephants, setStars, setFriends }}>
+    <AppContext.Provider
+      value={{
+        elephants,
+        stars,
+        friends,
+        setElephants,
+        setStars,
+        setFriends,
+        hasElephant,
+        setHasElephant,
+      }}>
       {children}
     </AppContext.Provider>
   );

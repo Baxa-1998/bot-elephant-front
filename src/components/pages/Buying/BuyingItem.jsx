@@ -38,7 +38,7 @@ export default function BuyingItem({ item, getElephantInfo }) {
         </div>
         <div className="buying__btn">
           {item.active ? (
-            <Link to={'/bought'}>
+            <Link to={'/'}>
               <Button onClick={() => getElephantInfo(item)} className={'flex items-center !w-[95%]'}>
                 Купить <span className="ml-[48px]">{item.price}</span>{' '}
                 <img className="ml-[8px]" src="/white-star.png" alt="white-star" />
