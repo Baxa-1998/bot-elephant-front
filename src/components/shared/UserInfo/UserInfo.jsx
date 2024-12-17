@@ -39,7 +39,14 @@ export default function UserInfo() {
           {/* {location.pathname === '/bought' &&      <img onClick={handleBack} src="/arrow-white.svg" alt="arrow-white" /> } */}
           {/* {hasElephant &&  <img onClick={handleBack} src="/arrow-white.svg" alt="arrow-white" />} */}
           <div className="avatar">
-            <img src="/avatar1.png" alt="avatar" />
+            <img
+                src={`https://t.me/i/userpic/320/${telegram.initDataUnsafe.user?.username}.jpg`}
+                onLoad={({currentTarget}) => {
+                  currentTarget.naturalWidth == 1 ? (currentTarget.src = "/avatar1.png") : '';
+                }}
+                alt="User avatar"
+            />
+            {/*<img src="/avatar1.png" alt="avatar"/>*/}
           </div>
           <h3 className={`${location.pathname === '/profile' ? 'text-black' : ''}`}>
             {telegram.initDataUnsafe.user?.last_name || telegram.initDataUnsafe.user?.first_name ? (
