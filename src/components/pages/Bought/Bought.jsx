@@ -9,7 +9,7 @@ import { Navigation } from 'swiper/modules';
 import BoughtItem from './BoughtItem';
 export default function Bought() {
   const {elephants} = useAppContext()
-  console.log(elephants);
+  
   
   
   return (

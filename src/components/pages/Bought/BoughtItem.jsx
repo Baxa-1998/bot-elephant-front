@@ -18,7 +18,10 @@ export default function BoughtItem({ item }) {
 
       </div>
       <div className='mt-[16px]'>
-      <Button>Продать слона</Button>
+        <Link to={'https://t.me/share/url?url={https://buy-elephant.netlify.app/}&text={Зарабатывай на слонах}'}>
+        <Button>Продать слона</Button>
+        </Link>
+
       </div>
       
       <div className='bought__prize'>
@@ -55,7 +58,10 @@ export default function BoughtItem({ item }) {
       </div>
 
       <div>
+        <Link to={'/buying'}>
         <Button className={'!text-[#000000] !rounded-lg mt-[20px]'}>Купить слона</Button>
+        </Link>
+      
       </div>
    
      
