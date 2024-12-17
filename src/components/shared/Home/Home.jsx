@@ -1,19 +1,58 @@
-import React, { useContext, useEffect } from 'react';
+import React from 'react';
 import './home.scss';
-import Atention from '../Attention/Attention';
 import Button from '../../UI/Button/Button';
-import { Link } from 'react-router';
+import {useNavigate} from 'react-router';
 
 import UserInfo from '../UserInfo/UserInfo';
-import { useAppContext } from '../../../context/infoCTX';
+import {useAppContext} from '../../../context/infoCTX';
 import Bought from '../../pages/Bought/Bought';
 
 export default function Home() {
   const [isElephant, setIsElephant] = React.useState(true);
   const { elephants, hasElephant } = useAppContext();
-  useEffect(() => {
-    console.log(elephants, hasElephant);
-  }, [elephants, hasElephant]);
+  const { setHasElephant ,elephantsData, setElephantsData,} = useAppContext();
+  const navigate = useNavigate();
+  const firstElephant = elephantsData.find(item => item.level === 1);
+
+    console.log(elephantsData);
+
+
+    const handleBuy = () => {
+        setElephantsData((prevData) => {
+            const updatedData = [...prevData];
+
+            const nextInactiveElephant = updatedData.find((item) => !item.active);
+            if (nextInactiveElephant) {
+
+                // nextInactiveElephant.active = true;
+                setHasElephant(true)
+            }
+            return updatedData;
+        });
+    };
+
+    function handlePurchase(data) {
+        console.log(data);
+        handleBuy()
+
+
+        setElephantsData((prevData) => {
+
+            const updatedData = prevData.map((item) => {
+                if (item.id === data.id) {
+
+
+
+                    return { ...item, purchased: true };
+                }
+
+                return item;
+            });
+
+            return updatedData;
+        });
+    }
+
 
   return (
     <section className="home">
@@ -34,9 +73,12 @@ export default function Home() {
          Приглашай друзей и получай 50% <br /> с каждой продажи слона !
        </p> */}
                 <div className="mt-[15px]">
-                  <Link to={'/buying'}>
-                    <Button>Купить слона</Button>
-                  </Link>
+                  {/*<Link to={'/buying'}>*/}
+                  {/*  <Button>Купить слона</Button>*/}
+                  {/*</Link>*/}
+                    <Button onClick={() => handlePurchase(firstElephant)}>
+                        Купить слона
+                    </Button>
                   <div className="flex items-center justify-center h-[65px] bg-[#262626] w-[100%] m-auto mt-[15px] rounded-[52px]">
                     <h4 className="text-[#FEAC3E] font-bold text-[18px] text-center leading-6">
                       Зарабатывайте от <br /> 50% вместе со слоном !

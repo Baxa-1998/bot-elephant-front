@@ -2,9 +2,11 @@ import React from 'react';
 import { Link, useLocation, useNavigate } from 'react-router';
 import './userInfo.scss';
 import { useAppContext } from '../../../context/infoCTX';
+import {useTelegram} from "../../../hooks/useTelegram.js";
 export default function UserInfo() {
   const location = useLocation();
   const navigate = useNavigate();
+  const telegram = useTelegram();
   const { hasElephant, user, stars } = useAppContext();
   const handleBack = () => {
     if (location.pathname !== '/') {
@@ -40,7 +42,11 @@ export default function UserInfo() {
             <img src="/avatar1.png" alt="avatar" />
           </div>
           <h3 className={`${location.pathname === '/profile' ? 'text-black' : ''}`}>
-            {user}
+            {telegram.initDataUnsafe.user?.last_name || telegram.initDataUnsafe.user?.first_name ? (
+                `${telegram.initDataUnsafe.user?.first_name} ${telegram.initDataUnsafe.user?.last_name}`
+            ) : (
+                telegram.initDataUnsafe.user?.username
+            )}
           </h3>
         </div>
    
