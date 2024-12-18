@@ -17,7 +17,7 @@ export default function Bought() {
     setIsLoading(true);
     setTimeout(() => {
       setIsLoading(false);
-    }, 2000);
+    }, 1000);
   }, []);
 
   if (isLoading) {
