@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import './bought.scss';
 import Button from '../../UI/Button/Button';
 import { Link } from 'react-router';
 import './bought.scss';
-import Skeleton from 'react-loading-skeleton';
-import 'react-loading-skeleton/dist/skeleton.css'
+import Preloader from '../../shared/Preloader/Preloader';
+import ImageComponent from '../../UI/ImageComponent/ImageComponent';
+
 export default function BoughtItem({ item }) {
  
   
@@ -15,7 +16,10 @@ export default function BoughtItem({ item }) {
    
        <div className='bought__avaliable pb-[25px]'>
        <div className="bought__item_img">
-        <img src={item.activeImg || <Skeleton/>} alt="elephant" />
+      
+        <ImageComponent src={item.activeImg}/>
+  
+ 
       </div>
    
       <div className="bought__item_lvl">

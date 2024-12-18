@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { Suspense, useEffect } from 'react';
 import './bought.scss';
 import UserInfo from '../../shared/UserInfo/UserInfo';
 import { useAppContext } from '../../../context/infoCTX';
@@ -28,6 +28,7 @@ export default function Bought() {
         <div className="bought__top">
           <UserInfo />
         </div>
+      
         <Swiper modules={[Navigation]} navigation={true} className="mySwiper">
           {elephantsData.map((item) => (
             <SwiperSlide>
@@ -35,6 +36,8 @@ export default function Bought() {
             </SwiperSlide>
           ))}
         </Swiper>
+      
+       
       </section>
     );
   }

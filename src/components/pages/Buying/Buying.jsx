@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { Suspense, useEffect, useRef, useState } from 'react';
 import './buying.scss';
 import UserInfo from '../../shared/UserInfo/UserInfo';
 import BuyingItem from './BuyingItem';
@@ -8,6 +8,7 @@ import 'swiper/css/navigation';
 import { Navigation } from 'swiper/modules';
 import { useAppContext } from '../../../context/infoCTX';
 import { data } from '../../../data';
+import Preloader from '../../shared/Preloader/Preloader';
 
 export default function Buying() {
   const { setHasElephant ,elephantsData, setElephantsData,} = useAppContext();
@@ -54,6 +55,7 @@ export default function Buying() {
       <div className="buying__top">
         <UserInfo />
       </div>
+   
       <Swiper
         // onInit={(swiper) => {
 
@@ -71,6 +73,8 @@ export default function Buying() {
           </SwiperSlide>
         ))}
       </Swiper>
+   
+  
     </section>
   );
 }

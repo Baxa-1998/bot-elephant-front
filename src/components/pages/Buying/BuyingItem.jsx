@@ -4,9 +4,10 @@ import Button from '../../UI/Button/Button';
 import { Link } from 'react-router';
 import { useAppContext } from '../../../context/infoCTX';
 import { handleBuy, handleClick, handlePurchase } from '../../../utils/utils';
+import ImageComponent from '../../UI/ImageComponent/ImageComponent';
 
 export default function BuyingItem({ item }) {
-  const { setHasElephant, setElephantsData } = useAppContext();
+  const { setElephantsData } = useAppContext();
 
   // const handleClick = (data) => {
   //   handlePurchase(data);
@@ -55,8 +56,8 @@ export default function BuyingItem({ item }) {
     <div className="buying__item">
       <div className="buying__item_img">
      
-   
-          <img src={item.notActiveImg} alt="elephant" />
+   <ImageComponent src={item.notActiveImg}/>
+          {/* <img src={item.notActiveImg} alt="elephant" /> */}
     
       </div>
       <div className="buying__item_info">
