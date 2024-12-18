@@ -1,20 +1,25 @@
 import './App.scss';
 
-import Home from './components/shared/Home/Home';
 
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
-import { Layout } from './components/shared/Layout/Layout';
-import Profile from './components/pages/Profile/Profile';
-import Buying from './components/pages/Buying/Buying';
-import { useEffect } from 'react';
-import Bought from './components/pages/Bought/Bought';
+
+
+
+import { lazy, Suspense, useEffect } from 'react';
+
+
 
 
 
 
 
 function App() {
-
+ 
+  const Home = lazy(()=> import('./components/shared/Home/Home'))
+  const Bought = lazy(()=> import('./components/pages/Bought/Bought'))
+  const Buying = lazy(()=> import('./components/pages/Buying/Buying'))
+  const Layout = lazy(()=> import('./components/shared/Layout/Layout'))
+  const Profile = lazy(()=> import('./components/pages/Profile/Profile'))
   const telegram = window.Telegram.WebApp; 
 
 
@@ -30,8 +35,8 @@ function App() {
  
     <Router>
     <Routes>
-    
-    <Route path='/' element={<Layout/>}>
+
+    <Route path='/' element={<Suspense fallback={<div>Loading</div>}><Layout/></Suspense> }>
     <Route path="/" element={<Home/>} />
     <Route path="/profile" element={<Profile/>} />
     <Route path="/buying" element={<Buying/>} />
