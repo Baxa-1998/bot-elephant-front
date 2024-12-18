@@ -25,6 +25,10 @@
       height: 42px;
       border-radius: 50%;
       border: 1px solid #ffff;
+      img{
+        object-fit: cover;
+       border-radius: 50%;
+      }
     
     }
 

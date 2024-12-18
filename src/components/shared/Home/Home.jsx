@@ -77,7 +77,7 @@ console.log(hasElephant);
                   {/*<Link to={'/buying'}>*/}
                   {/*  <Button>Купить слона</Button>*/}
                   {/*</Link>*/}
-                    <Button onClick={() => handlePurchase(firstElephant)}>
+                    <Button className={'home__btn'} onClick={() => handlePurchase(firstElephant)}>
                         Купить слона
                     </Button>
                   <div className="flex items-center justify-center h-[65px] bg-[#262626] w-[100%] m-auto mt-[15px] rounded-[52px]">
@@ -98,7 +98,7 @@ console.log(hasElephant);
                       с возможностью <br />
                       вывода на карту
                     </p>
-                    <p className='mt-[20px] text-[18px]'>
+                    <p className='mt-[20px] text-[18px] pt-[25px]'>
                       Из-за повышенного спроса на <br /> слонов, полный функционал доступен только после
                       покупки слона
                     </p>
