@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import './buying.scss';
 import Button from '../../UI/Button/Button';
 import { Link } from 'react-router';
 import { useAppContext } from '../../../context/infoCTX';
 import { handleBuy, handleClick, handlePurchase } from '../../../utils/utils';
-import ImageComponent from '../../UI/ImageComponent/ImageComponent';
+import MyImage from '../../UI/ImageComponent/MyImage';
+
 
 export default function BuyingItem({ item }) {
   const { setElephantsData } = useAppContext();
@@ -56,9 +57,18 @@ export default function BuyingItem({ item }) {
     <div className="buying__item">
       <div className="buying__item_img">
      
-   <ImageComponent src={item.notActiveImg}/>
-          {/* <img src={item.notActiveImg} alt="elephant" /> */}
+
+   {/* <ImageComponent src={item.notActiveImg}/> */}
+
+
+ <MyImage image={item.notActiveImg}/>
+
+ 
+        
     
+
+
+
       </div>
       <div className="buying__item_info">
         <div className="buying__lvl">

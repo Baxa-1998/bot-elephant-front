@@ -4,7 +4,8 @@ import Button from '../../UI/Button/Button';
 import { Link } from 'react-router';
 import './bought.scss';
 import Preloader from '../../shared/Preloader/Preloader';
-import ImageComponent from '../../UI/ImageComponent/ImageComponent';
+import MyImage from '../../UI/ImageComponent/MyImage';
+
 
 export default function BoughtItem({ item }) {
  
@@ -17,7 +18,8 @@ export default function BoughtItem({ item }) {
        <div className='bought__avaliable pb-[25px]'>
        <div className="bought__item_img">
       
-        <ImageComponent src={item.activeImg}/>
+      <MyImage image={item.activeImg}/>
+
   
  
       </div>
