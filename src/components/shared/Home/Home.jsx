@@ -78,7 +78,7 @@ console.log(hasElephant);
                   {/*  <Button>Купить слона</Button>*/}
                   {/*</Link>*/}
                     <Button className={'home__btn'} onClick={() => handlePurchase(firstElephant)}>
-                        Купить слона <img src="/cursor.svg" alt="" />
+                        Купить слона <img src="/cursor.svg" alt="cursor" />
                     </Button>
                   <div className="flex items-center justify-center h-[65px] bg-[#262626] w-[100%] m-auto mt-[15px] rounded-[52px]">
                     <h4 className="text-[#FEAC3E] font-bold text-[18px] text-center leading-6">
