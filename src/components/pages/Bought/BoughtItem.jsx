@@ -3,6 +3,7 @@ import './bought.scss';
 import Button from '../../UI/Button/Button';
 import { Link } from 'react-router';
 import './bought.scss';
+import Skeleton from 'react-loading-skeleton';
 export default function BoughtItem({ item }) {
  
   
@@ -13,7 +14,7 @@ export default function BoughtItem({ item }) {
    
        <div className='bought__avaliable pb-[25px]'>
        <div className="bought__item_img">
-        <img src={item.activeImg} alt="elephant" />
+        <img src={item.activeImg || <Skeleton/>} alt="elephant" />
       </div>
    
       <div className="bought__item_lvl">
