@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 
 
 import { lazy, Suspense, useEffect } from 'react';
+import Preloader from './components/shared/Preloader/Preloader';
 
 
 
@@ -36,7 +37,7 @@ function App() {
     <Router>
     <Routes>
 
-    <Route path='/' element={<Suspense fallback={<div>Loading</div>}><Layout/></Suspense> }>
+    <Route path='/' element={<Suspense fallback={<Preloader/>}><Layout/></Suspense> }>
     <Route path="/" element={<Home/>} />
     <Route path="/profile" element={<Profile/>} />
     <Route path="/buying" element={<Buying/>} />
