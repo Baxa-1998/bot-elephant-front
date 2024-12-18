@@ -4,6 +4,7 @@ import Button from '../../UI/Button/Button';
 import { Link } from 'react-router';
 import './bought.scss';
 import Skeleton from 'react-loading-skeleton';
+import 'react-loading-skeleton/dist/skeleton.css'
 export default function BoughtItem({ item }) {
  
   
