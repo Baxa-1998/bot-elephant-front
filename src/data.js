@@ -7,7 +7,7 @@ export const data = [
   stars: 150,
   price: 100, 
   active: true, 
-  purchased: false
+  purchased: true
 },
 {
   id: 2,

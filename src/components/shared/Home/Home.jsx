@@ -14,17 +14,18 @@ export default function Home() {
   const navigate = useNavigate();
   const firstElephant = elephantsData.find(item => item.level === 1);
 
-    console.log(elephantsData);
+    console.log(firstElephant);
 
 
     const handleBuy = () => {
+    
         setElephantsData((prevData) => {
             const updatedData = [...prevData];
 
             const nextInactiveElephant = updatedData.find((item) => !item.active);
             if (nextInactiveElephant) {
 
-                // nextInactiveElephant.active = true;
+                nextInactiveElephant.active = true;
                 setHasElephant(true)
             }
             return updatedData;
@@ -52,7 +53,7 @@ export default function Home() {
             return updatedData;
         });
     }
-
+console.log(hasElephant);
 
   return (
     <section className="home">

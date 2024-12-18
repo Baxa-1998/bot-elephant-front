@@ -12,7 +12,7 @@ import Buying from '../Buying/Buying';
 export default function Bought() {
   const { elephantsData } = useAppContext();
 
-    console.log('hasElephant')
+    console.log('we here')
 
   return (
     <section className="bought">

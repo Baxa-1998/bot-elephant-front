@@ -3,56 +3,61 @@ import './buying.scss';
 import Button from '../../UI/Button/Button';
 import { Link } from 'react-router';
 import { useAppContext } from '../../../context/infoCTX';
+import { handleBuy, handleClick, handlePurchase } from '../../../utils/utils';
 
 export default function BuyingItem({ item }) {
   const { setHasElephant, setElephantsData } = useAppContext();
 
-  const handleClick = (data) => {
-    handlePurchase(data);
+  // const handleClick = (data) => {
+  //   handlePurchase(data);
     
-  };
-  function handlePurchase(data) {
-    console.log(data);
-    handleBuy()
+  // };
+  // function handlePurchase(data) {
+  //   console.log(data);
+  //   handleBuy()
     
 
-    setElephantsData((prevData) => {
+  //   setElephantsData((prevData) => {
      
-      const updatedData = prevData.map((item) => {
-        if (item.id === data.id) {
+  //     const updatedData = prevData.map((item) => {
+  //       if (item.id === data.id) {
     
         
           
-          return { ...item, purchased: true };
-        }
+  //         return { ...item, purchased: true };
+  //       }
         
-        return item;
-      });
+  //       return item;
+  //     });
 
-      return updatedData; 
-    });
+  //     return updatedData; 
+  //   });
+  // }
+  // const handleBuy = () => {
+  //   setElephantsData((prevData) => {
+  //     const updatedData = [...prevData];
+  //     const nextInactiveElephant = updatedData.find((item) => !item.active);
+  //     if (nextInactiveElephant) {
+  //       nextInactiveElephant.active = true;
+
+  //       setHasElephant(true);
+  //     }
+  //     return updatedData;
+  //   });
+  // };
+  function clickHandler(data) {
+ 
+    handleClick(data,setElephantsData, handlePurchase)
+    
   }
-  const handleBuy = () => {
-    setElephantsData((prevData) => {
-      const updatedData = [...prevData];
-      const nextInactiveElephant = updatedData.find((item) => !item.active);
-      if (nextInactiveElephant) {
-        nextInactiveElephant.active = true;
-
-        setHasElephant(true);
-      }
-      return updatedData;
-    });
-  };
 
   return (
     <div className="buying__item">
       <div className="buying__item_img">
-        {item.active ? (
-          <img src={item.activeImg} alt="elephant" />
-        ) : (
+     
+   
           <img src={item.notActiveImg} alt="elephant" />
-        )}
+    
       </div>
       <div className="buying__item_info">
         <div className="buying__lvl">
@@ -78,7 +83,7 @@ export default function BuyingItem({ item }) {
         <div className="buying__btn">
           {item.active ? (
             <Link to={'/'}>
-     <Button onClick={() => handleClick(item)} className={'flex items-center !w-[95%]'}>
+     <Button onClick={() => clickHandler(item)} className={'flex items-center !w-[95%]'}>
                 Купить <span className="ml-[48px]">{item.price}</span>{' '}
                 <img className="ml-[8px]" src="/white-star.png" alt="white-star" />
               </Button>
