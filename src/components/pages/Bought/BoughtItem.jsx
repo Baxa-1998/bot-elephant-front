@@ -11,7 +11,7 @@ export default function BoughtItem({ item }) {
     <div className="bought__item"> 
 
    
-       <div className='bought__avaliable'>
+       <div className='bought__avaliable pb-[25px]'>
        <div className="bought__item_img">
         <img src={item.activeImg} alt="elephant" />
       </div>

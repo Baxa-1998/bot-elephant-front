@@ -32,11 +32,15 @@
         font-size: 18px;
 
       }
-      button{
-        transition: 500ms ease-in-out;
-        cursor: url('../../../../public/cursor.svg'), auto;
-
+      .home__btn{
+        position: relative;
+        img{
+          position: absolute;
+          right: 0;
+          top: 25px;
+        }
       }
+    
     }
 
   }

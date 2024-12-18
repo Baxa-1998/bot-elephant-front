@@ -40,11 +40,11 @@ export default function UserInfo() {
           {/* {hasElephant &&  <img onClick={handleBack} src="/arrow-white.svg" alt="arrow-white" />} */}
           <div className="avatar">
             <img
-                // src={`https://t.me/i/userpic/320/${telegram.initDataUnsafe.user?.username}.jpg`}
-                // onLoad={({currentTarget}) => {
-                //   currentTarget.naturalWidth == 1 ? (currentTarget.src = "/avatar1.png") : '';
-                // }}
-                src='/avatar.png'
+                src={`https://t.me/i/userpic/320/${telegram.initDataUnsafe.user?.username}.jpg`}
+                onLoad={({currentTarget}) => {
+                  currentTarget.naturalWidth == 1 ? (currentTarget.src = "/avatar1.png") : '';
+                }}
+              
                 alt="User avatar"
             />
             {/*<img src="/avatar1.png" alt="avatar"/>*/}
