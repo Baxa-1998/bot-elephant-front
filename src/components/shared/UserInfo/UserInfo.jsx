@@ -19,7 +19,7 @@ export default function UserInfo() {
 
   
       WebApp.BackButton.onClick(() => {
-        console.log('Back button clicked!');
+       
     
         window.history.back();
       });
@@ -29,6 +29,9 @@ export default function UserInfo() {
         WebApp.BackButton.offClick();  
         WebApp.BackButton.hide();    
       };
+
+    } else if (location.pathname === '/'){
+      WebApp.BackButton.hide();  
     }
   }, []);
   const handleBack = () => {
