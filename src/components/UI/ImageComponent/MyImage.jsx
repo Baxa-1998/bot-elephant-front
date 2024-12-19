@@ -1,17 +1,35 @@
 import React from 'react';
+import { useState } from 'react';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 import 'react-lazy-load-image-component/src/effects/blur.css';
 
-const MyImage = ({ image }) => (
-  <LazyLoadImage
-    alt={image}
-    effect="blur"
-    wrapperProps={{
-        // If you need to, you can tweak the effect transition using the wrapper style.
-        style: {transitionDelay: "1s"},
-    }}
-    src={image} />
-);
+const MyImage = ({ image, alt }) => {
+ 
+  const [isLoaded, setIsLoaded] = useState(false);
 
-export default MyImage
+
+  const handleImageLoad = () => {
+    setIsLoaded(true);  
+  };
+
+  return (
+    <div>
+     
+      {!isLoaded && <div>Загрузка...</div>}  
+
+      <LazyLoadImage
+        alt={alt}  
+        effect="blur"  
+        src={image} 
+        onLoad={handleImageLoad}  
+        wrapperProps={{
+          style: { transitionDelay: "1s" }, 
+        }}
+      />
+    </div>
+  );
+};
+
+export default MyImage;
+
