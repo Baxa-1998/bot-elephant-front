@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import '../../shared/Home/home.scss';
 
@@ -6,11 +6,13 @@ import UserInfo from '../../shared/UserInfo/UserInfo';
 import './profile.scss';
 import Button from '../../UI/Button/Button';
 import { useAppContext } from '../../../context/infoCTX';
+import star from '../../../assets/star.svg'
 
 export default function Profile() {
   const { hasElephant,  stars, friends, elephantsData } = useAppContext();
   const data = elephantsData.filter((item)=> item.purchased === true)
   const count = data.length
+  const [isDisabled, setIsDisabled] = useState(true); 
   
   return (
     <section className="profile">
@@ -33,9 +35,12 @@ export default function Profile() {
         </div>
       </div>
       <div className="mt-[28px]">
-        <Button className={'!text-[#262626] !w-[95%]'}>
-          Вывести <img className="ml-[10px]" src="/black-star.png" alt="" />
-        </Button>
+      <Button
+ 
+  className={`!text-[#696969] !w-[95%] !bg-gradient-to-r from-[#959595] to-[#959595]`}
+>
+  Вывести <img className="ml-[10px]" src={star} alt="star" />
+</Button>
         <p className="text-center mt-[9px]">Вывод доступен от 1 000 рублей</p>
       </div>
     </section>
