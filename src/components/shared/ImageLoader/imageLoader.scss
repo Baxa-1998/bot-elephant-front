@@ -1,0 +1,27 @@
+.imageLoaderWrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 358px;
+  height: 358px;
+  .imageLoader{
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 2px solid white;
+    border-top-color: var(--primary-color); /* Цвет анимации */ 
+    padding-bottom: 150px;
+    margin-top: 50px;
+    animation: spin 1s linear infinite;
+  }
+}
+
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
