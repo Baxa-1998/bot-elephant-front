@@ -11,6 +11,7 @@ import BuyingItem from '../Buying/BuyingItem';
 import Buying from '../Buying/Buying';
 import Preloader from '../../shared/Preloader/Preloader';
 export default function Bought() {
+
   const { elephantsData } = useAppContext();
   const [isLoading, setIsLoading] = React.useState(false);
   useEffect(() => {
@@ -29,7 +30,7 @@ export default function Bought() {
           <UserInfo />
         </div>
       
-        <Swiper modules={[Navigation]} navigation={true} className="mySwiper">
+        <Swiper modules={[Navigation]} autoHeight-={true} navigation={true} className="mySwiper">
           {elephantsData.map((item) => (
             <SwiperSlide>
               {item.purchased ? <BoughtItem item={item} /> : <BuyingItem item={item} />}
