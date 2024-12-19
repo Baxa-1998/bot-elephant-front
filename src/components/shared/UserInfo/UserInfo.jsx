@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router';
 import './userInfo.scss';
 import { useAppContext } from '../../../context/infoCTX';
@@ -8,6 +8,29 @@ export default function UserInfo() {
   const navigate = useNavigate();
   const telegram = useTelegram();
   const { hasElephant,  stars } = useAppContext();
+
+  useEffect(() => {
+   
+    if (window.Telegram && window.Telegram.WebApp) {
+      const { WebApp } = window.Telegram;
+
+ 
+      WebApp.BackButton.show();
+
+  
+      WebApp.BackButton.onClick(() => {
+        console.log('Back button clicked!');
+    
+        window.history.back();
+      });
+
+  
+      return () => {
+        WebApp.BackButton.offClick();  
+        WebApp.BackButton.hide();    
+      };
+    }
+  }, []);
   const handleBack = () => {
     if (location.pathname !== '/') {
       navigate(-1);
@@ -29,15 +52,15 @@ export default function UserInfo() {
           {/* {location.pathname === '/' && hasElephant ? (
             <img onClick={handleBack} src="/arrow-white.svg" alt="arrow-white" />
           ) : null} */}
-          {location.pathname === '/profile' && (
+
+          
+          {/* {location.pathname === '/profile' && (
             <img onClick={handleBack} src="/arrow-black.svg" alt="arrow-white" />
           )}
           {location.pathname === '/buying' && (
             <img onClick={handleBack} src="/arrow-white.svg" alt="arrow-white" />
-          )}
-          {/* {location.pathname === '/' &&   <img onClick={handleBack} src="/arrow-white.svg" alt="arrow-white" />   } */}
-          {/* {location.pathname === '/bought' &&      <img onClick={handleBack} src="/arrow-white.svg" alt="arrow-white" /> } */}
-          {/* {hasElephant &&  <img onClick={handleBack} src="/arrow-white.svg" alt="arrow-white" />} */}
+          )} */}
+ 
           <div className="avatar">
             <img
                 src={`https://t.me/i/userpic/320/${telegram.initDataUnsafe.user?.username}.jpg`}
