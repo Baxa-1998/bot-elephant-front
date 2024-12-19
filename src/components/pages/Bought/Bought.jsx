@@ -30,9 +30,9 @@ export default function Bought() {
           <UserInfo />
         </div>
       
-        <Swiper modules={[Navigation]} autoHeight-={true} navigation={true} className="mySwiper">
-          {elephantsData.map((item) => (
-            <SwiperSlide>
+        <Swiper modules={[Navigation]} navigation={true} className="mySwiper">
+          {elephantsData.map((item,index) => (
+            <SwiperSlide key={index}>
               {item.purchased ? <BoughtItem item={item} /> : <BuyingItem item={item} />}
             </SwiperSlide>
           ))}

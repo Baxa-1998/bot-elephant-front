@@ -15,7 +15,7 @@ const MyImage = ({ image, alt }) => {
   };
 
   return (
-    <div>
+    <div className='w-[358px] h-[358px]'>
      
       {!isLoaded && <ImageLoader/>}  
 
