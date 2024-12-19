@@ -16,6 +16,7 @@ export default function Layout  ()  {
     return (
       <AppProvider>
             <div className='wrapper'>
+            {/* <Preloader/> */}
        
      
         <main>
