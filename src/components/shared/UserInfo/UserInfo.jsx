@@ -14,8 +14,12 @@ export default function UserInfo() {
     if (window.Telegram && window.Telegram.WebApp) {
       const { WebApp } = window.Telegram;
 
- 
-      WebApp.BackButton.show();
+      if (location.pathname === '/') {
+        WebApp.BackButton.hide(); 
+      } else {
+        WebApp.BackButton.show();
+      }
+    
 
   
       WebApp.BackButton.onClick(() => {
@@ -29,9 +33,7 @@ export default function UserInfo() {
         WebApp.BackButton.offClick();  
         WebApp.BackButton.hide();    
       };
-
-    } else if (location.pathname === '/'){
-      WebApp.BackButton.hide();  
+      
     }
   }, []);
   const handleBack = () => {
