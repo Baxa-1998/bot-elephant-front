@@ -5,7 +5,13 @@ import '../../shared/Home/home.scss';
 import UserInfo from '../../shared/UserInfo/UserInfo';
 import './profile.scss';
 import Button from '../../UI/Button/Button';
+import { useAppContext } from '../../../context/infoCTX';
+
 export default function Profile() {
+  const { hasElephant,  stars, friends, elephantsData } = useAppContext();
+  const data = elephantsData.filter((item)=> item.purchased === true)
+  const count = data.length
+  
   return (
     <section className="profile">
       <UserInfo />
@@ -13,7 +19,7 @@ export default function Profile() {
         <h4 className="text-[#747272] text-[14px] pb-[4px]">Статистика</h4>
         <div className="statistics__item">
           <h3>Куплено слонов</h3>
-          <p>28</p>
+          <p>{count}</p>
         </div>
         <div className="statistics__item">
           <h3 className="flex items-center gap-2">

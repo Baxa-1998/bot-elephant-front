@@ -7,7 +7,7 @@ export default function UserInfo() {
   const location = useLocation();
   const navigate = useNavigate();
   const telegram = useTelegram();
-  const { hasElephant, user, stars } = useAppContext();
+  const { hasElephant,  stars } = useAppContext();
   const handleBack = () => {
     if (location.pathname !== '/') {
       navigate(-1);
