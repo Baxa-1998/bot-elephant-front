@@ -11,7 +11,7 @@ export default function Home() {
   const [isElephant, setIsElephant] = React.useState(true);
   const { elephants, hasElephant } = useAppContext();
   const { setHasElephant ,elephantsData, setElephantsData,} = useAppContext();
-  const navigate = useNavigate();
+ 
   const firstElephant = elephantsData.find(item => item.level === 1);
 
     console.log(firstElephant);
@@ -53,7 +53,7 @@ export default function Home() {
             return updatedData;
         });
     }
-console.log(hasElephant);
+
 
   return (
     <section className="home">

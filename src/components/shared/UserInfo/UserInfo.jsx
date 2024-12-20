@@ -36,12 +36,12 @@ export default function UserInfo() {
       
     }
   }, []);
-  const handleBack = () => {
-    if (location.pathname !== '/') {
-      navigate(-1);
-    }
-    navigate('/');
-  };
+  // const handleBack = () => {
+  //   if (location.pathname !== '/') {
+  //     navigate(-1);
+  //   }
+  //   navigate('/');
+  // };
   const isCheckElephant = () =>{
     if(!hasElephant) {
       return;

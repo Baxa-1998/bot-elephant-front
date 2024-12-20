@@ -3,7 +3,7 @@ export const data = [
   id: 1,
   level: 1,
   discount: 5,
-  activeImg: '/elephant/1.svg',
+  activeImg: '../../../assets/elephants/1.svg',
   stars: 150,
   price: 100, 
   active: true, 
