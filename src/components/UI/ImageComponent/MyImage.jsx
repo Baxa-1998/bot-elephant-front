@@ -24,7 +24,8 @@ const MyImage = ({ image, alt }) => {
         alt={alt}  
         effect="blur"  
         src={image} 
-        onLoad={handleImageLoad}  
+        onLoad={handleImageLoad} 
+          
         wrapperProps={{
           style: { transitionDelay: "1s" }, 
         }}
