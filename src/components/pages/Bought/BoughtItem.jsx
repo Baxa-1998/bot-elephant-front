@@ -29,12 +29,13 @@ export default function BoughtItem({ item }) {
         <p>{item.level} lvl</p>
       </div>
       <div className="mt-[16px]">
-        <Link
-          to={
-            'https://t.me/share/url?url={https://buy-elephant.netlify.app/}&text={Зарабатывай на слонах}'
-          }>
-          <Button>Продать слона</Button>
-        </Link>
+        {/*<Link*/}
+        {/*  to={*/}
+        {/*    'https://t.me/share/url?url={https://buy-elephant.netlify.app/}&text={Зарабатывай на слонах}'*/}
+        {/*  }>*/}
+        {/*  <Button>Продать слона</Button>*/}
+        {/*</Link>*/}
+          <Button onClick={() => {throw new Error('Sentry error!')}}>Продать слона</Button>
       </div>
 
       <div className="bought__prize">

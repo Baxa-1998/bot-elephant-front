@@ -72,7 +72,7 @@ export default function UserInfo() {
                 onLoad={({currentTarget}) => {
                   currentTarget.naturalWidth == 1 ? (currentTarget.src = "/avatar1.png") : '';
                 }}
-              
+                onError={(error) => {console.log(error)}}
                 alt="User avatar"
             />
             {/*<img src="/avatar1.png" alt="avatar"/>*/}
