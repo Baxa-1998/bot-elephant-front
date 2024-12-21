@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 
 import { lazy, Suspense, useEffect } from 'react';
 import Preloader from './components/shared/Preloader/Preloader';
+import LeaderBords from './components/pages/Leaderbords/LeaderBords';
 
 
 
@@ -42,6 +43,7 @@ function App() {
     <Route path="/profile" element={<Profile/>} />
     <Route path="/buying" element={<Buying/>} />
     <Route path='/bought' element={<Bought/>}/>
+    <Route path="/leaders" element={<LeaderBords/>}/>
     </Route>
       
         {/* <Route path="/about" element={<About />} />
