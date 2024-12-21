@@ -22,7 +22,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-left: 20px;
+    padding-left: 18px;
     padding-right: 18px;
     
 
@@ -31,7 +31,7 @@
       flex-direction: column;
       align-items: center;
       cursor: pointer;
-     gap: 15px;
+    
       margin-bottom: 20px;
       .navigation__line{
         width: 39px;
@@ -43,10 +43,23 @@
 
        
       }
+      &:nth-child(1) {
+        .navigation__line{
+          margin-bottom: 18px;
+        }
+       
+      }
+      &:nth-child(2) {
+        .navigation__line{
+          margin-bottom: 15px;
+        }
+       
+      }
       &:nth-child(3) {
         .navigation__line{
-
+          margin-bottom: 25px;
         }
+        
         svg{
           fill: none;
         }

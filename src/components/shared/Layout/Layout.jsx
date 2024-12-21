@@ -10,9 +10,9 @@ import Footer from '../Footer/Footer'
 
 export default function Layout  ()  {
   const telegram = useTelegram()
-  // if (!(telegram?.platform === 'ios' || telegram?.platform === 'android')) {
-  //   return <Plug/>;
-  // }else {
+  if (!(telegram?.platform === 'ios' || telegram?.platform === 'android')) {
+    return <Plug/>;
+  }else {
     return (
       <AppProvider>
             <div className='wrapper'>
@@ -29,5 +29,5 @@ export default function Layout  ()  {
   
     )
   }
-
+}
  
