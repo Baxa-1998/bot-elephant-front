@@ -9,7 +9,7 @@
   background: url('../../../assets//navigation.webp');
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: contain;
  
   min-height: 94px;
 
@@ -25,48 +25,86 @@
 
     
 
-    .footer__navigation__item{
+    .footer__navigation__item {
       display: flex;
       flex-direction: column;
       align-items: center;
       cursor: pointer;
       width: 33%;
-    
       margin-bottom: 20px;
-      .navigation__line{
+    
+      .navigation__line {
         width: 39px;
         height: 2px;
         background: #B0B0B0;
       }
-      svg{
-        fill: #B0B0B0; 
-
-       
+    
+      svg {
+        fill: #B0B0B0;
       }
+    
       &:nth-child(1) {
-        .navigation__line{
+        .navigation__line {
           margin-bottom: 18px;
+          // margin-right: 4px;
         }
-       
       }
+    
       &:nth-child(2) {
-        .navigation__line{
-          margin-bottom: 15px;
+        .navigation__line {
+          margin-bottom: 14px;
         }
-       
       }
+    
       &:nth-child(3) {
-        .navigation__line{
+        .navigation__line {
           margin-bottom: 25px;
+       
         }
-        
-        svg{
+    
+        svg {
           fill: none;
         }
       }
+    
+      // Медиазапросы для адаптивности
+      @media (max-width: 768px) {
+        width: 50%; // измените на 50% для средних экранов
+     
+    
+        .navigation__line {
+          width: 30px;
+          margin-bottom: 10px;
+        }
+      }
+    
+      @media (max-width: 480px) {
+        width: 100%; // делаем элементы на всю ширину экрана
       
+    
+        .navigation__line {
+          max-width: 39px;
+          margin-bottom: 8px;
+        }
+      }
+    
+      @media (max-width: 380px) {
+        width: 100%; // при экранах меньше 380px делаем элементы на всю ширину
+     
+      
+          .navigation__line {
+            max-width: 39px;// уменьшаем ширину линии для маленьких экранов
+            margin-bottom: 10px !important;
+         
+            
+          }
+
+        
+          
+        
       
 
+      }
     }
 
   }
