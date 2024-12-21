@@ -4,12 +4,12 @@
   align-items: center;
   width: 100%;
   height: 51px;
-  background: linear-gradient(90deg, #EC9827, #FEAC3E);
+  background: linear-gradient(rgba(50, 50, 50, 1), rgba(0, 0, 0, 1));
   // backdrop-filter: blur(20px);
-  margin-left: 50%;
-  transform: translate(-50%);
+  // margin-left: 50%;
+  // transform: translate(-50%);
   border-radius: 50px;
-  color: #FFFFFF;
+  color: var(--primary-color);
   font-family: var(--monsterrat-font);
   font-weight: 600;
   font-size: 20px;
@@ -18,9 +18,9 @@
   opacity: 1;
   transition: opacity 0.3s ease;
  
-  &:hover{
-    box-shadow: 5px 3px 10px 2px #EC9827;
-  }
+  // &:hover{
+  //   box-shadow: 5px 3px 10px 2px #EC9827;
+  // }
 }
 
 .hidden{

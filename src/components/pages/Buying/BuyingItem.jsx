@@ -1,10 +1,11 @@
 import React, { Suspense } from 'react';
 import './buying.scss';
-import Button from '../../UI/Button/Button';
+// import Button from '../../UI/Button/Button';
 import { Link } from 'react-router';
 import { useAppContext } from '../../../context/infoCTX';
 import { handleBuy, handleClick, handlePurchase } from '../../../utils/utils';
 import MyImage from '../../UI/ImageComponent/MyImage';
+import MainButton from '../../UI/Button/MainButton';
 
 
 export default function BuyingItem({ item }) {
@@ -94,17 +95,17 @@ export default function BuyingItem({ item }) {
         <div className="buying__btn">
           {item.active ? (
             <Link to={'/'}>
-     <Button onClick={() => clickHandler(item)} className={'flex items-center !w-[95%]'}>
+     <MainButton onClick={() => clickHandler(item)} className={'flex items-center !w-[95%]'}>
                 Купить <span className="ml-[48px]">{item.price}</span>{' '}
                 <img className="ml-[8px]" src="/white-star.png" alt="white-star" />
-              </Button>
+              </MainButton>
             </Link>
          
           
           ) : (
-            <Button className={'flex items-center !text-[12px] !w-[95%]'}>
+            <MainButton className={'flex items-center !text-[12px] !w-[95%]'}>
               Разблокируется после покупки предыдущего
-            </Button>
+            </MainButton>
           )}
         </div>
       </div>

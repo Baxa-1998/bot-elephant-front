@@ -3,7 +3,7 @@
   // height: 90vh; 
   padding-bottom: 60px;
   .home__top{
-    height: 498px; 
+    height: 433px; 
     background: url('../../../assets/main-bg.png');
     background-repeat: no-repeat;
     background-size: cover;
@@ -35,9 +35,7 @@
       .home__btn{
         position: relative;
         img{
-          position: absolute;
-          right: 0;
-          top: 15px;
+          margin-top: auto;
           // transition: 500ms ease-in;
           animation: moveCursor 1.5s ease-in-out infinite;
           animation-delay: 0.5s;

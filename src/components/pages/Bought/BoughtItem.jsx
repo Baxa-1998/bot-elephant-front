@@ -1,10 +1,11 @@
 import React, { Suspense } from 'react';
 import './bought.scss';
-import Button from '../../UI/Button/Button';
+
 import { Link } from 'react-router';
 import './bought.scss';
 import Preloader from '../../shared/Preloader/Preloader';
 import MyImage from '../../UI/ImageComponent/MyImage';
+import MainButton from '../../UI/Button/MainButton';
 
 
 export default function BoughtItem({ item }) {
@@ -33,11 +34,11 @@ export default function BoughtItem({ item }) {
           to={
             '#'
 }>
-          <Button>Продать слона</Button>
+          <MainButton>Продать слона</MainButton>
         </Link>
       </div>
 
-      <div className="bought__prize">
+      {/* <div className="bought__prize">
         <h4>Вознаграждение</h4>
         <div className="bought__prize_item">
           <h3>{item.stars}</h3>
@@ -61,7 +62,7 @@ export default function BoughtItem({ item }) {
           <p>+ 50%</p>
         </div>
       
-      </div>
+      </div> */}
         
         </div>
    

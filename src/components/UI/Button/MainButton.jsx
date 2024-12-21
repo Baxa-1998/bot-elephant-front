@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import './button.scss'
-import { useLocation } from 'react-router'
-const Button = React.memo(({ children, className, ...props }) => {
+
+const MainButton = React.memo(({ children, className, ...props }) => {
  
 
 
@@ -12,4 +12,4 @@ const Button = React.memo(({ children, className, ...props }) => {
   );
 });
 
-export default Button;
+export default MainButton ;
